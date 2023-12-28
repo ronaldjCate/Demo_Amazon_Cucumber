@@ -19,7 +19,7 @@ public class DOM {
     private static WebDriver driver;
     public static WebDriver webDriver(){
         if (driver==null){
-            String edgeDriverPath=screenshotDir;
+            String edgeDriverPath="src/test/resources/webDriver/edge/msedgedriver.exe";
             System.setProperty("webDriver.edge.driver",edgeDriverPath);
             driver=new EdgeDriver();
         }
