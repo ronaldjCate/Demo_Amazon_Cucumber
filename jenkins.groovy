@@ -16,7 +16,7 @@ stages{
             script{
                 def mvnHome = tool name: 'maven_3_9_5',type: 'maven'
                 withEnv(["PATH+MAVEN=${mvnHome}/bin"]){
-                    bat "${mvnHome}\\bin\\mvn clean verify -Dcucumber.filter.tags="${tags}""
+                    bat "${mvnHome}\\bin\\mvn clean verify -Dcucumber.filter.tags='${tags}'"
                 }
             }
         }
