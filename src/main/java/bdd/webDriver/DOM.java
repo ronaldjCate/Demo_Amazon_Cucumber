@@ -19,7 +19,7 @@ public class DOM {
     private static WebDriver driver;
     public static WebDriver webDriver(){
         if (driver==null){
-            String edgeDriverPath="src/test/resources/webDriver/edge/msedgedriver.exe";
+            String edgeDriverPath="C:\\Users\\Ronald\\IdeaProjects\\Demo_Amazon_Cucumber\\src\\test\\resources\\webDriver\\edge\\msedgedriver.exe";
             System.setProperty("webDriver.edge.driver",edgeDriverPath);
             driver=new EdgeDriver();
         }
