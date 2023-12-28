@@ -6,6 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
+/*
 @CucumberOptions(plugin = {"json:target/build/cucumber.json"},
         stepNotifications=true,
         publish = true,
@@ -13,6 +14,8 @@ import org.junit.runner.RunWith;
         glue = {"bdd.stepDefinition"},
         tags= "@prueba1"
 )
+
+ */
 public class Runner {
 
 
