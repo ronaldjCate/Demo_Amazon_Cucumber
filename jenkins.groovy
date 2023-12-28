@@ -1,3 +1,8 @@
+import java.text.SimpleDateFormat
+
+def defDateFormat = new SimpleDateFormat("yyyyMMddHHmm")
+def defDate = new Date()
+def defTimestamp = defDateFormat.format(defDate).toString()
 pipeline{
 agent any
 stages{
@@ -16,7 +21,7 @@ stages{
             script{
                 def mvnHome = tool name: 'maven_3_9_5',type: 'maven'
                 withEnv(["PATH+MAVEN=${mvnHome}/bin"]){
-                    bat "${mvnHome}\\bin\\mvn clean verify -Dcucumber.filter.tags=\"${tags}\""
+                    bat "${mvnHome}\\bin\\mvn clean verify -Dcucumber.features=src/test/resources/features -Dcucumber.filter.tags=\"${tags}\" -Dcucumber.plugin=json:target/build/cucumber.json -Dcucumber.glue=bdd.stepDefinition"
                 }
             }
         }
