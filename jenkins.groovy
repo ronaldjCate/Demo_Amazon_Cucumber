@@ -21,7 +21,7 @@ pipeline{
                 script{
                     def mvnHome = tool name: 'maven_3_9_5',type: 'maven'
                     withEnv(["PATH+MAVEN=${mvnHome}/bin"]){
-                        bat "mvn test -Dcucumber.features=src/test/resources/features -Dcucumber.filter.tags=\"${tags}\" -Dcucumber.plugin=json:target/build/cucumber.json -Dcucumber.glue=bdd.stepDefinition"
+                        bat "mvn clean verify -Dcucumber.features=src/test/resources/features -Dcucumber.filter.tags=\"${tags}\" -Dcucumber.plugin=json:target/build/cucumber.json -Dcucumber.glue=bdd.stepDefinition"
                     }
                 }
             }
