@@ -5,6 +5,10 @@ def defDate = new Date()
 def defTimestamp = defDateFormat.format(defDate).toString()
 pipeline{
     agent any
+    tools {
+        maven 'maven_3_9_5'
+        jdk 'JDK21'
+    }
     stages{
         stage('Compile Stage'){
             steps{
