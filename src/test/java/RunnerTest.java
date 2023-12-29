@@ -8,7 +8,10 @@ import java.io.File;
 import java.io.IOException;
 
 public class RunnerTest {
+    /*
     public static void main(String[] args) {
+
+
         System.setProperty("webDriver.edge.driver","D:\\itera\\auto\\reto_yape\\auto\\demoWeb-Cucumber\\src\\test\\resources\\webDriver\\msedgedriver.exe");
         WebDriver driver1 = new EdgeDriver();
         String screenshotDir = "D:\\itera\\auto\\reto_yape\\auto\\demoWeb-Cucumber\\src\\test\\resources\\evidencias";
@@ -51,4 +54,6 @@ public class RunnerTest {
             throw new RuntimeException(e);
         }
     }
+
+         */
 }
