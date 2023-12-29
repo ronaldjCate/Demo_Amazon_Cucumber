@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -20,8 +21,8 @@ public class DOM {
     public static WebDriver webDriver(){
         if (driver==null){
             String edgeDriverPath="C:\\Users\\Ronald\\IdeaProjects\\Demo_Amazon_Cucumber\\src\\test\\resources\\webDriver\\edge\\msedgedriver.exe";
-            System.setProperty("webDriver.edge.driver",edgeDriverPath);
-            driver=new EdgeDriver();
+            System.setProperty("webDriver.chrome.driver",edgeDriverPath);
+            driver=new ChromeDriver();
         }
         return driver;
     }
